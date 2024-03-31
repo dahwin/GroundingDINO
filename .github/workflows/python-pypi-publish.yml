@@ -27,7 +27,7 @@ jobs:
     steps:
     - name: Setup CUDA
       uses: Jimver/cuda-toolkit@v0.2.13
-      id: cuda-toolkit
+      continue-on-error: true
       with:
         cuda: "12.1.0"
     - name: Set up Python
