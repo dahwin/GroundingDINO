@@ -41,7 +41,7 @@ from setuptools import find_packages, setup
 from torch.utils.cpp_extension import CUDA_HOME, CppExtension, CUDAExtension
 
 # groundingdino version info
-version = "0.1.0"
+version = "1.0.0"
 package_name = "groundingdino"
 cwd = os.path.dirname(os.path.abspath(__file__))
 
@@ -221,8 +221,8 @@ if __name__ == "__main__":
     install_requires, dependency_links = parse_requirements("requirements.txt")
 
     setup(
-        name="groundingdino",
-        version="0.1.0",
+        name=package_name,
+        version=version,
         author="International Digital Economy Academy, Shilong Liu",
         url="https://github.com/IDEA-Research/GroundingDINO",
         description="open-set object detector",
