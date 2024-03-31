@@ -1,7 +1,6 @@
 [build-system]
 requires = [
   "setuptools",
-  "--extra-index-url=https://download.pytorch.org/whl/cu121",
   "torch",
   "numpy",
   "wheel"
