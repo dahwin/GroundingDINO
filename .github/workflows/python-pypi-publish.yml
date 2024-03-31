@@ -28,7 +28,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
     - name: Audit packages
-      uses: pypa/gh-action-pip-audit@v1.0.0
+      uses: pypa/gh-action-pip-audit@v1.0.8
       with:
         inputs: requirements.txt
     - name: Setup CUDA
