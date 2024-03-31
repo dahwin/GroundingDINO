@@ -20,7 +20,8 @@ jobs:
         python-version: ["3.8", "3.9", "3.10", "3.11"]
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: Jimver/cuda-toolkit@v0.2.14
+    - name: Setup CUDA
+      uses: Jimver/cuda-toolkit@v0.2.14
       id: cuda-toolkit
       with:
         cuda: "12.1.0"
