@@ -216,6 +216,9 @@ if __name__ == "__main__":
     with open("LICENSE", "r", encoding="utf-8") as f:
         license = f.read()
 
+    with open('README.md') as readme_file:
+        readme = readme_file.read()
+
     write_version_file()
 
     install_requires, dependency_links = parse_requirements("requirements.txt")
@@ -237,4 +240,6 @@ if __name__ == "__main__":
         ),
         ext_modules=get_extensions(),
         cmdclass={"build_ext": torch.utils.cpp_extension.BuildExtension},
+        long_description=readme,
+        long_description_content_type='text/markdown',
     )
