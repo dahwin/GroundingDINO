@@ -41,7 +41,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
     - name: Build package
-      run: python -m build
+      run: python -m build --config-setting index-url=https://download.pytorch.org/whl/cu121
     - name: Store packages
       uses: actions/upload-artifact@v3
       with:
