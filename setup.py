@@ -43,6 +43,7 @@ from torch.utils.cpp_extension import CUDA_HOME, CppExtension, CUDAExtension
 # groundingdino version info
 version = "1.0.0"
 package_name = "groundingdino"
+program_name = "groundingdinopy"
 cwd = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -224,7 +225,7 @@ if __name__ == "__main__":
     install_requires, dependency_links = parse_requirements("requirements.txt")
 
     setup(
-        name=package_name,
+        name=program_name,
         version=version,
         author="International Digital Economy Academy, Shilong Liu",
         url="https://github.com/IDEA-Research/GroundingDINO",
