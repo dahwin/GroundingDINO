@@ -22,12 +22,18 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         python-version: ["3.10", "3.11"]
+
     runs-on: ${{ matrix.os }}
     steps:
+    - name: Clean CUDA installation in Linux
+      if: matrix.os == 'ubuntu-latest'
+      run: rm -rf /cuda_download
+    - name: Clean CUDA installation in Windows
+      if: matrix.os == 'windows-latest'
+      run: del /s /q dir 
     - name: Setup CUDA
       uses: Jimver/cuda-toolkit@v0.2.14
       id: cuda-toolkit
-      continue-on-error: true
       with:
         cuda: "12.1.0"
         use-github-cache: false
