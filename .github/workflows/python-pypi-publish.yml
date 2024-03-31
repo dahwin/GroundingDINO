@@ -30,8 +30,6 @@ jobs:
       id: cuda-toolkit
       with:
         cuda: "12.1.0"
-        use-github-cache: false
-        use-local-cache: false
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
