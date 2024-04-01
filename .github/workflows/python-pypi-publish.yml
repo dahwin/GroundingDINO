@@ -17,14 +17,8 @@ jobs:
 
   build:
     name: Build
-    strategy:
-      max-parallel: 1
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-        python-version: ["3.8", "3.9", "3.10", "3.11"]
 
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
     - name: Free Disk Space (Ubuntu)
       if: runner.os == 'Linux'
@@ -39,7 +33,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: "3.10"
     - name: Install dependencies
       run: |
         pip install --upgrade pip
@@ -49,9 +43,7 @@ jobs:
       with:
         inputs: requirements.txt
     - name: Build package 
-      run: |
-        pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
-        python setup.py sdist bdist_wheel
+      run: python setup.py sdist bdist_wheel
     - name: Store packages
       uses: actions/upload-artifact@v3
       with:

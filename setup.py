@@ -239,7 +239,7 @@ if __name__ == "__main__":
                 "tests",
             )
         ),
-        ext_modules=get_extensions(),
+        #ext_modules=get_extensions(),
         cmdclass={"build_ext": torch.utils.cpp_extension.BuildExtension},
         long_description=readme,
         long_description_content_type='text/markdown',
