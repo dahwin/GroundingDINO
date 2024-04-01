@@ -58,7 +58,7 @@ jobs:
 
     environment:
       name: testpypi
-      url: https://test.pypi.org/p/groundingdinopy
+      url: https://test.pypi.org/p/gdinopy
 
     permissions:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
@@ -83,7 +83,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/p/groundingdinopy  # Replace <package-name> with your PyPI project name
+      url: https://pypi.org/p/gdinopy  # Replace <package-name> with your PyPI project name
     permissions:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
 

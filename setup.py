@@ -43,7 +43,7 @@ from torch.utils.cpp_extension import CUDA_HOME, CppExtension, CUDAExtension
 # groundingdino version info
 version = "1.0.0"
 package_name = "groundingdino"
-program_name = "groundingdinopy"
+program_name = "gdinopy"
 cwd = os.path.dirname(os.path.abspath(__file__))
 
 
