@@ -43,8 +43,6 @@ jobs:
     - name: Install dependencies
       run: |
         pip install --upgrade pip
-        pip install transformers>=4.39.2
-        pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cu121
     - name: Audit packages
       uses: pypa/gh-action-pip-audit@v1.0.8
       with:

@@ -1,9 +1,10 @@
+--extra-index-url https://download.pytorch.org/whl/cu121
 numpy>=1.23.5
+transformers>=4.39.2
+addict>=2.4.0
+yapf>=0.40.2
 torch>=2.0.0
 torchvision>=0.15.1
-transformers>=4.39.2
-addict>=0.1.7
-yapf>=0.40.2
 timm>=0.9.16
 opencv-python>=4.9.0.80
 supervision>=0.19.0
