@@ -41,7 +41,7 @@ from setuptools import find_packages, setup
 from torch.utils.cpp_extension import CUDA_HOME, CppExtension, CUDAExtension
 
 # groundingdino version info
-version = "1.0.0"
+version = "1.1.0"
 package_name = "groundingdino"
 program_name = "gdinopy"
 cwd = os.path.dirname(os.path.abspath(__file__))
